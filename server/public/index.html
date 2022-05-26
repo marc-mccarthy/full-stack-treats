@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Treat Yoself</title>
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+    <script src="/vendor/jquery.min.js"></script>
+    <script src="/scripts/client.js"></script>
+    <link rel="stylesheet" href="/vendor/normalize.css" />
+    <link rel="stylesheet" href="/vendor/skeleton.css" />
+    <link rel="stylesheet" href="/styles/stylesheet.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <div class="row">
+          <div class="eight columns">
+            <h1>Delicious treats are delicious</h1>
+          </div>
+        <div class="four columns">
+          <div class="search row">
+            <div class="nine columns">
+              <input class="u-max-full-width" type="text" placeholder="Find a treat" id="search" name="query" />
+            </div>
+            <div class="three columns">
+              <button id="searchButton">Go</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </header>
+      <section class="row">
+        <!--- Main treat display -->
+        <div class="eight columns" id="treat-display">
+          <!-- Treat row should repeat for every 2 treats -->
+        </div>
+        <!-- sidebar -->
+        <div class="four columns">
+          <!--- Add treat form -->
+          <div class="entry row">
+            <h2 class="fancy">add a treat</h2>
+            <form id="add-treat">
+              <div class="row">
+                <label for="treatNameInput">Name</label>
+                <input class="u-full-width" type="text" placeholder="Cake" name="name" id="treatNameInput" />
+              </div>
+              <div class="row">
+                <label for="treatDescriptionInput">Description</label>
+                <textarea class="u-full-width" placeholder="Tasty cake is tasty" name="description" id="treatDescriptionInput"></textarea>
+              </div>
+              <div class="row">
+                <label for="treatUrlInput">Image Url</label>
+                <input class="u-full-width" type="text" placeholder="http://cake.com/layer.jpg" name="pic" id="treatUrlInput" />
+              </div>
+              <button class="button-primary" type="submit">Submit</button>
+            </form>
+          </div>
+        <!-- Toggle modes -->
+        <div class="entry row">
+          <h2 class="fancy">toggle modes</h2>
+          <button class="button-primary" id="modeToggle">Edit</button>
+        </div>
+      </div>
+      </section>
+      <!-- modal display -->
+      <section id="modal">
+        <form>
+          <h2>Edit treat</h2>
+          <div class="row">
+            <label for="treat-name">Name</label>
+            <input class="u-full-width" type="text" id="treat-name" />
+          </div>
+          <div class="row">
+            <label for="treatDescription">Description</label>
+            <input class="u-full-width" type="text" id="treat-description" />
+          </div>
+          <div class="row">
+            <label for="treat-url">Image Url</label>
+            <input class="u-full-width" type="text" id="treat-url" />
+          </div>
+          <button class="button-primary" id="modal-save">Save</button>
+          <button id="modal-cancel">Cancel</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
