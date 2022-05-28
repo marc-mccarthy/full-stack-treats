@@ -1,15 +1,17 @@
 {
-  "name": "prime_code-challenge_sql",
-  "version": "2.0.0",
-  "description": "Code Challenge 3",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server/server.js"
-  },
-  "author": "instructors@primeacademy.io",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.16.4",
-    "pg": "^8.2.1"
-  }
+    "name": "prime_code-challenge_sql",
+    "version": "2.0.0",
+    "description": "Code Challenge 3",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server/server.js",
+        "go": "nodemon server/server.js"
+    },
+    "author": "instructors@primeacademy.io",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.16.4",
+        "nodemon": "^2.0.16",
+        "pg": "^8.2.1"
+    }
 }
