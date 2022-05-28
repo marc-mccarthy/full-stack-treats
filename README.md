@@ -63,7 +63,7 @@ You will need:
 
 - [x] `GET /treats` should return all treats from the database.
 
-- [ ] `DELETE /treats/<id>` Deletes a specific treat. Note that the Mode Toggle button in the interface will display the delete button for each treat.
+- [x] `DELETE /treats/<id>` Deletes a specific treat. Note that the Mode Toggle button in the interface will display the delete button for each treat.
 
 - [x] `POST /treats` expects a treat name, description and link to a url image. There are images provided in `/server/public/assets`
 

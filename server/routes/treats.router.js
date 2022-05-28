@@ -28,7 +28,17 @@ router.post('/', (req, res) => {
 })
 
 // PUT /treats (req.query)
-
+router.put('/', (req, res) => {
+    console.log(`PUT Request: ${req.body} & ${req.query.id}`);
+    let queryString = `UPDATE treats SET description = $1 WHERE id = $2`;
+    let values = [req.body.description, req.query.id];
+    pool.query(queryString, values)
+    .then(result => {
+        res.sendStatus(200);
+    }).catch(result => {
+        res.sendStatus(500);
+    })
+})
 
 // DELETE /treats (req.query)
 router.delete('/', (req, res) => {
