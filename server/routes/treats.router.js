@@ -31,5 +31,16 @@ router.post('/', (req, res) => {
 
 
 // DELETE /treats (req.query)
+router.delete('/', (req, res) => {
+    console.log(`DELETE Request: ${req.body} & ${req.query.id}`);
+    let queryString = `DELETE FROM treats WHERE id = $1`;
+    let values = [req.query.id];
+    pool.query(queryString, values)
+    .then(result => {
+        res.sendStatus(200);
+    }).catch(result => {
+        res.sendStatus(500);
+    })
+})
 
 module.exports = router;
